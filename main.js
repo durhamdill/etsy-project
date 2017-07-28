@@ -7,7 +7,11 @@ console.log(data);
 
 
 // 1: Show me how to calculate the average price of all items.
-// identify the price of all items; add them together; divide by total number of items to get average price
+
+// NOTES: identify the price of all items; add them together; divide by total number of items to get average price
+
+// add the following funtion to round final answer; found on this site: http://www.jacklmoore.com/notes/rounding-in-javascript/
+
 function round(value, decimals) {
   return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 }
@@ -28,7 +32,8 @@ function question1 () {
 
 
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
-// scan prices for those greater than or equal to $14 and less than or equal to $18
+
+// NOTES: scan prices for those greater than or equal to $14 and less than or equal to $18; put them in new array
 function question2 () {
   // Answer:
   let etsyPrice14_18 = [];
@@ -77,6 +82,8 @@ function question5 () {
   for (let product=0; product<data.length; product++) {
     if (data[product].materials.length >=8) {
       console.log(data[product].title + " has " + data[product].materials.length + " materials:\n");
+
+      // create additional inner loop to print each material item individually and add the dash:
         for (let material=0; material<data[product].materials.length; material++) {
           console.log("- " +data[product].materials[material]+"\n");
   }
@@ -84,7 +91,7 @@ function question5 () {
 }
 }
 
-// attempt to create another array to catch material list and add dash before it:
+// NOTES: attempt to create new array to catch material list and add dash before it:
 // for (let product=0; product<data.length; product++) {
 //   if (data[product].materials.length >=8); {
 //     for (let material=0; material<data[product].materials.length; material++) {
@@ -99,6 +106,8 @@ function question5 () {
 
 
 // 6: How many items were made by their sellers?
+
+// NOTES: i only counted those that had a value of "i_did"; did not inlcude "collective"
 // Answer:
 function question6 () {
   // Answer:
